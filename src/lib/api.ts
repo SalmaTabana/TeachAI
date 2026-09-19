@@ -35,7 +35,7 @@ export interface StudentInsightsData { has_data: boolean; summary: string; recom
 export interface DashboardData { stats: { lessons_created: number; quizzes_generated: number; worksheets: number; activities: number; resources_total: number }; recent_work: Array<{ id:number; title:string; type:string; grade:string; subject:string; date:string; icon:string; color:string }>; student_insight?: { has_data: boolean; summary: string; recommendation: string; }; }
 
 const API_URL: string =
-  (import.meta.env.VITE_API_URL as string) || "http://127.0.0.1:8000";
+  (import.meta.env.VITE_API_URL as string) || "";
 
 // ═══════════════════════════════════════════════════════════
 // Core fetch helper
