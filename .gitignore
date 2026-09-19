@@ -1,0 +1,83 @@
+# ═══════════════════════════════════════════════════════════
+# Node.js / Frontend
+# ═══════════════════════════════════════════════════════════
+node_modules/
+dist/
+build/
+.cache/
+.vite/
+vite.config.*.timestamp-*
+*.tsbuildinfo
+
+# ═══════════════════════════════════════════════════════════
+# Environment Variables (SECRETS - never commit!)
+# ═══════════════════════════════════════════════════════════
+.env
+.env.local
+.env.*.local
+.env*
+
+# ═══════════════════════════════════════════════════════════
+# Logs
+# ═══════════════════════════════════════════════════════════
+*-debug.log*
+logs/
+*.log
+.claude-replay.*
+.tmp-*
+
+# ═══════════════════════════════════════════════════════════
+# Figma Make
+# ═══════════════════════════════════════════════════════════
+/.figma/design-context/
+/.plugins/
+/.opencode-skills/
+
+# ═══════════════════════════════════════════════════════════
+# Python / Backend (added for TeachAI backend)
+# ═══════════════════════════════════════════════════════════
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+eggs/
+wheels/
+pip-wheel-metadata/
+develop-eggs/
+downloads/
+sdist/
+var/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ═══════════════════════════════════════════════════════════
+# IDE / Editor
+# ═══════════════════════════════════════════════════════════
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ═══════════════════════════════════════════════════════════
+# OS
+# ═══════════════════════════════════════════════════════════
+.DS_Store
+Thumbs.db
+Desktop.ini
