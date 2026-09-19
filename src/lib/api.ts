@@ -52,12 +52,20 @@ async function request<TRes>(path: string, options: RequestInit = {}): Promise<T
   } catch {
     throw new Error(`Cannot reach backend at ${API_URL}. Make sure the server is running.`);
   }
-  if (!res.ok) {
-    let detail = `HTTP ${res.status}`;
-    try { const err = await res.json(); detail = err.detail || JSON.stringify(err); }
-    catch { detail = await res.text(); }
-    throw new Error(`API error: ${detail}`);
+ if (!res.ok) {
+  const raw = await res.text();
+
+  let detail = `HTTP ${res.status}`;
+
+  try {
+    const err = JSON.parse(raw);
+    detail = err.detail || JSON.stringify(err);
+  } catch {
+    detail = raw || detail;
   }
+
+  throw new Error(`API error: ${detail}`);
+}
   return res.json() as Promise<TRes>;
 }
 
